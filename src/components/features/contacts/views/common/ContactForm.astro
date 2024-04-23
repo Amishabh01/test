@@ -1,0 +1,62 @@
+---
+import React, { useState } from "react";
+import { useContactForm } from "../state/useContactForm.js";
+import SubmitContact from "../../services/usecases/SubmitContact.jsx";
+const { formData,isSubmitted,formErrors,handleInputChange,handleSubmit,resetForm} = useContactForm();
+
+
+  <SubmitContact client:load
+    {...{
+      formData,
+      isSubmitted,
+      formErrors,
+      handleInputChange,
+      handleSubmit,
+      resetForm
+    }}
+  />
+
+---
+<ContactForm />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ---
+// src/component/features/contact/views/common/contactForm.astro
+
+import React,{ useState } from 'react';
+import { useContactForm } from '../state/useContactForm.js';
+import { SubmitContact } from '../../services/usecases/SubmitContact.js';
+
+export const ContactForm1 = () => {
+  const { formData, isSubmitted, formErrors, handleInputChange, handleSubmit, resetForm } = useContactForm();
+
+  return (
+    <SubmitContact
+      formData={formData}
+      isSubmitted={isSubmitted}
+      formErrors={formErrors}
+      handleInputChange={handleInputChange}
+      handleSubmit={handleSubmit}/>
+  );
+};
+---
+
+<ContactForm1 client:load /> -->

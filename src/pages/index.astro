@@ -1,10 +1,18 @@
-
 ---
-import Layout from '../layouts/Layout.astro';
-import ContactPage from '../components/features/contacts/views/pages/ContactPage.astro';
-
+import  ContactPage  from "../components/features/contacts/views/pages/ContactPage.astro"
 ---
 
-<Layout>
-  <ContactPage />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+
+    
+    <ContactPage client:load/> 
+  </body>
+</html>

@@ -1,13 +1,13 @@
-// contactFormStore.js (or contactFormStore.ts)
-import { atom } from 'nanostores';
+//contactFormStore.js (or contactFormStore.ts)
+import { useStore } from 'nanostores';
 
-export const formDataStore = atom({
+export const contactFormStore = useStore({
   name: '',
   email: '',
   phoneNo: '',
   message: '',
 });
 
-export const formErrorsStore = atom({});
-export const isSubmittedStore = atom(false);
-export const showPopupStore = atom(false);
+export const formErrorsStore = useStore({});
+export const isSubmittedStore = useStore(false);
+export const showPopupStore = useStore(false);
